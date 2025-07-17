@@ -21,7 +21,7 @@ export default function ContactSection() {
     {
       icon: 'ri-map-pin-fill',
       title: 'Head Office',
-      details: ['123 Infrastructure Boulevard', 'Victoria Island, Lagos', 'Nigeria'],
+      details: ['12 Street', '1202 Geneva', 'Switzerland'],
       color: 'from-blue-500 to-blue-700',
       bgColor: 'from-blue-500/10 to-blue-700/10'
     },

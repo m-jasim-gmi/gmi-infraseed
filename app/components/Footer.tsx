@@ -129,9 +129,9 @@ export default function Footer() {
                   <i className="ri-map-pin-fill text-sm"></i>
                 </div>
                 <div className="text-gray-300 group-hover:text-white transition-colors duration-300">
-                  <p>123 Infrastructure Boulevard</p>
-                  <p>Victoria Island, Lagos</p>
-                  <p>Nigeria</p>
+                  <p>12 Street</p>
+                  <p>1202 Geneva</p>
+                  <p>Switzerland</p>
                 </div>
               </div>
               <div className="group flex items-start space-x-3">
@@ -148,8 +148,8 @@ export default function Footer() {
                   <i className="ri-mail-fill text-sm"></i>
                 </div>
                 <div className="text-gray-300 group-hover:text-white transition-colors duration-300">
-                  <p>info@infraseedconsortium.com</p>
-                  <p>projects@infraseedconsortium.com</p>
+                  <p>info@infraseedengineering.com</p>
+                  <p>projects@infraseedengineering.com</p>
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function Footer() {
         <div className="border-t border-white/20 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-center md:text-left">
-              <p>&copy; 2024 Infraseed Engineering. All rights reserved.</p>
+              <p>&copy; 2025 Infraseed Engineering. All rights reserved.</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm">
               {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item, index) => (
