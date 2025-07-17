@@ -2,6 +2,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Footer() {
@@ -42,10 +43,12 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-8">
-              <img 
-                src="https://static.readdy.ai/image/936f6357bde6e9efad03bc5c8cb93252/646628d8496092a3d758a4791a09cd54.png" 
+              <Image 
+                src="/assets/logo/logo.png" 
                 alt="Infraseed Engineering Logo" 
-                className="h-16 w-auto mb-6 drop-shadow-2xl"
+                width={64}
+                height={64}
+                className="h-16 w-auto mb-6 drop-shadow-2xl rounded-[10px]"
               />
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-200 to-green-200 bg-clip-text text-transparent">
                 Infraseed Engineering

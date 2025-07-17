@@ -37,7 +37,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center cursor-pointer">
-              <div className="relative w-[120px] sm:w-[155px] h-[48px] sm:h-[64px] rounded-[20px] overflow-hidden">
+              <div className="relative w-[120px] sm:w-[155px] h-[48px] sm:h-[64px] rounded-[10px] overflow-hidden">
                 <Image 
                   src="/assets/logo/logo.png"
                   alt="Infraseed Engineering Logo" 
