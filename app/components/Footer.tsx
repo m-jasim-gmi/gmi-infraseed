@@ -48,7 +48,7 @@ export default function Footer() {
                 alt="Infraseed Engineering Logo" 
                 width={64}
                 height={64}
-                className="h-16 w-auto mb-6 drop-shadow-2xl rounded-[10px]"
+                className="h-16 w-auto mb-6 drop-shadow-2xl rounded-[8px]"
               />
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-200 to-green-200 bg-clip-text text-transparent">
                 Infraseed Engineering
