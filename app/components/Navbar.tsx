@@ -8,8 +8,10 @@ import { useState, useEffect } from 'react';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -27,17 +29,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white backdrop-blur-md shadow-lg">
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center cursor-pointer">
-              <div className="relative w-[120px] sm:w-[155px] h-[48px] sm:h-[64px] rounded-[10px] overflow-hidden">
+              <div className="relative w-[140px] sm:w-[175px] h-[48px] sm:h-[64px] rounded-[10px] overflow-hidden">
                 <Image 
                   src="/assets/logo/logo.png"
                   alt="Infraseed Engineering Logo" 
@@ -54,41 +52,31 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             <button
               onClick={() => scrollToSection('hero')}
-              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-              }`}
+              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${mounted && isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-              }`}
+              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${mounted && isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-              }`}
+              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${mounted && isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('sectors')}
-              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-              }`}
+              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${mounted && isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Sectors
             </button>
             <button
               onClick={() => scrollToSection('why-choose-us')}
-              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
-              }`}
+              className={`text-sm lg:text-base font-medium transition-all duration-300 cursor-pointer hover:scale-105 ${mounted && isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
             >
               Why Us
             </button>
@@ -104,9 +92,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors duration-300 cursor-pointer ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-              }`}
+              className="w-10 h-10 flex items-center justify-center rounded-lg transition-colors duration-300 cursor-pointer text-gray-700 hover:bg-gray-100"
               aria-label="Toggle menu"
             >
               <i className={`${isMobileMenuOpen ? 'ri-close-line text-2xl' : 'ri-menu-line text-2xl'}`}></i>

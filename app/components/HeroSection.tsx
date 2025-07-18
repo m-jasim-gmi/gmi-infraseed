@@ -68,7 +68,7 @@ const HeroSection = () => {
             {/* Background Image */}
             <div 
               className="absolute inset-0 w-full h-full bg-cover bg-center"
-              style={{
+        style={{
                 backgroundImage: `url('${slide.bgImage}')`
               }}
             />
@@ -77,19 +77,19 @@ const HeroSection = () => {
           </div>
         ))}
       </div>
-
+      
       {/* Content */}
       <div className="relative z-20 w-full h-full flex flex-col justify-center items-center">
         <div className="w-full max-w-7xl mx-auto px-6 text-center text-white">
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight drop-shadow-2xl">
               {slides[currentSlide].title}
-              <br />
+            <br />
               <span className="text-4xl md:text-5xl lg:text-6xl font-light mt-2 block">
                 {slides[currentSlide].subtitle}
               </span>
-            </h1>
-            
+          </h1>
+          
             <div className="max-w-4xl mx-auto space-y-6">
               <p className="text-2xl md:text-4xl font-light drop-shadow-lg">
                 {slides[currentSlide].description}
@@ -100,10 +100,10 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
+        
         {/* Navigation Arrows */}
         <div className="absolute top-1/2 left-4 right-4 flex justify-between items-center transform -translate-y-1/2 z-30">
-          <button
+          <button 
             onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
             className="p-3 rounded-full bg-black/50 hover:bg-black/70 transition-all duration-300 text-white"
             aria-label="Previous slide"
@@ -112,7 +112,7 @@ const HeroSection = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <button
+          <button 
             onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
             className="p-3 rounded-full bg-black/50 hover:bg-black/70 transition-all duration-300 text-white"
             aria-label="Next slide"
@@ -150,13 +150,13 @@ const HeroSection = () => {
             <button 
               onClick={() => scrollToSection('services')}
               className="group bg-transparent text-white px-12 py-5 rounded-full text-lg font-semibold transition-all duration-500 border-2 border-white hover:bg-white hover:text-black hover:scale-105 hover:shadow-xl cursor-pointer whitespace-nowrap"
-            >
-              <span className="flex items-center gap-2">
-                Explore Services
-                <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform duration-300"></i>
-              </span>
-            </button>
-          </div>
+          >
+            <span className="flex items-center gap-2">
+              Explore Services
+              <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform duration-300"></i>
+            </span>
+          </button>
+        </div>
         </div>
       </div>
     </section>
